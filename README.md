@@ -34,4 +34,5 @@ UNBOUND STATE: The particles can only bind to the road. We simulate this as prev
 
 Output:
 
-The script writes in a file all the positions. We can analyze them later on with python
+The script writes in a file all the positions. We can analyze them later on with python.
+A simple example for how to analyze is the file plotter.py.
