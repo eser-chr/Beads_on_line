@@ -11,7 +11,7 @@ I created a 1D discrete road. Either randomly or based on a given distribution i
 
 
 
-Dynamics:
+Dynamics:/n
 
 For each step the programm will randomly pick a particle. This is done to avoid correlations that would appear if we had a queue of particles, that each of them would perform the following.
 
