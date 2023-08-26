@@ -8,6 +8,7 @@
 #include <algorithm> 
 using namespace std;
 
+// This is a branch comment
 
 // MAIN CONSTANTS OF THE SIMULATION
 const int SIMS=10; // Number of simulations for a setup so that we have better statistics.
