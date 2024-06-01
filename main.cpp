@@ -28,7 +28,6 @@ const int step_rate=9; // Num to define step probability Here 1/10
 uniform_int_distribution<int> stepping(0,step_rate);
 uniform_int_distribution<int> placer(0,X);
 uniform_int_distribution<int> roller(0,divider);
-#define PI 3.1415926
 
 
 // Cleaning any previous data from other simulations.
@@ -84,8 +83,8 @@ void unbind(int& a){
 }
 
 
-// STep forward on the grid
-void step(int& a,mt19937& engine){
+// Step forward on the grid
+void step(int& a, mt19937& engine){
 	int x=kinesins[a][0];
 	int type= kinesins[a][1];
 	if(type==1){
