@@ -1,9 +1,20 @@
 # Beads_on_line
-Monte Carlo simulation, TASEP with reaction terms
+This is the main library I wrote as part of my masters thesis.
+
+https://studenttheses.uu.nl/bitstream/handle/20.500.12932/39774/Thesis_Chris.pdf?sequence=1&isAllowed=y
+
+# Use/Installation
+One can install this small library, by downloading the project and then follow
+
+cd <Path to folder>
+mkdir build
+cd build
+cmake ..
+make install
 
 
-The code language is C++ and the code was created for my master's thesis.
-The link for the script is: https://studenttheses.uu.nl/bitstream/handle/20.500.12932/39774/Thesis_Chris.pdf?sequence=1&isAllowed=y
+# Example of use
+Please find an example file in the example folder
 
 
 
