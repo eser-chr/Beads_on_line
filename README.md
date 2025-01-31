@@ -16,34 +16,27 @@ make install
 # Example of use
 Please find an example file in the example folder
 
+# Main Idea
+
+The main idea of this project is to simulate a bulk of kinesins walking on a microtubule.
+In a more abstract or mathematical way one can imagine a 1D discrete axon. This axon represents the microtubule and in this
+simulation is discrete. The number of sides of this axon is noted as L.
+
+The kinesins can be thought as particles or beads that might reside on a side or hover above it. Sadly the axon is aware of that kinesin only if it is bound to it. Following, that idea we can define a state for a kinesin, either bound or unbound plus has a position i.e the side of the microtubule. 
+
+In this simulation we are intrested to know the position of all the kinesins no matter their state.
 
 
-Initial setup:
+## Dynamics
+The evolution of the system follows the following rules:
+1) At each iteration we randomly define a permutation of all the kinesins and we subiterate over them.
+2) During the sub-iteration we pick a kinesin and we try to bind/unbind that kinesin if initially it was unbound/bound accordingly. 
+Then if the final state of that kinesin is bound we try to move forward.
 
-I created a 1D discrete road. Either randomly or based on a given distribution i placed particles on the axis.
-
-
-
-Dynamics:
-
-
-For each step the programm will shuffle the order of particles to perform their move. This is done to avoid correlations that would appear if we had a queue of particles, that each of them would perform the following.
-
-
-Each bead can be found into two states. The one we can call it bound and the other unbound.
-
-
-BOUND STATE: The particles have a probability to step forward or to unbind. Using a random number we can simulate this mechanism. 
-If it tries to move but the position is obtained by another particle the step is cancelled.
-If it tries to unbind, it will unbind.
-If it tries to do nothing, nothing will change.
-
-
-UNBOUND STATE: The particles can only bind to the road. We simulate this as previously with a random number.
+By the word try we mean generate a random number and check if it is smaller than the given probabilities.
 
 
 
-Output:
-
-The script writes in a file all the positions. We can analyze them later on with python.
-A simple example for how to analyze is the file plotter.py.
+# Output
+For historical reasons the output is a vector of 10 snapshots of the system. These 10 snapshots are equidistant in time.
+Each snapshot simply contains the position of all kinesins.
